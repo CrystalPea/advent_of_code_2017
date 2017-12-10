@@ -1,5 +1,5 @@
-import pytest
-from p3 import create_spiral
+# import pytest
+from p3 import create_spiral, walk_spiral
 
 def test_spiral_starts():
     assert create_spiral(1) == [[1]]
@@ -25,3 +25,15 @@ def test_spiral_turns_left():
 def test_spiral_turns_down():
     assert create_spiral(6) == [[5,4,3],[6,1,2]]
     assert create_spiral(7) == [[5,4,3],[6,1,2],[7]]
+
+def test_walk_spiral_from_center_to_center():
+    assert walk_spiral(1) == 0
+
+def test_walk_spiral_from_12_to_center():
+    assert walk_spiral(12) == 3
+
+def test_walk_spiral_from_23_to_center():
+    assert walk_spiral(23) == 2
+
+def test_walk_spiral_from_1024_to_center():
+    assert walk_spiral(1024) == 31
