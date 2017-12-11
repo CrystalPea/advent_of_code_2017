@@ -47,7 +47,7 @@ def walk_spiral(number):
     return (abs(x - goal_x) + abs(y - goal_y))
 
 
-def create_mod_spiral(number):
+def create_mod_spiral(number, should_break=False):
     spiral = [[]]
     numbers = list(range(1,(number + 1)))
     cursor_index = 0
@@ -104,4 +104,6 @@ def create_mod_spiral(number):
                         mod = spiral[cursor_arr][-1] + spiral[cursor_arr][-2] + spiral[cursor_arr - 1][-1]
                     spiral[cursor_arr - 1].append(mod)
                     cursor_arr -= 1
+        if should_break and mod > number:
+            return mod
     return spiral

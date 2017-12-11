@@ -73,3 +73,6 @@ def test_create_mod_spiral_12():
 
 def test_create_mod_spiral_23():
     assert create_mod_spiral(23) == [[147,142,133,122,59],[304,5,4,2,57],[330,10,1,1,54],[351,11,23,25,26],[362,747,806]]
+
+def test_break_mod_spiral_23_at_mod_25():
+    assert create_mod_spiral(23, should_break=True) == 25
