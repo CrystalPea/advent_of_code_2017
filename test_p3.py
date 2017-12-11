@@ -58,3 +58,18 @@ def test_create_mod_spiral_7():
 
 def test_create_mod_spiral_8():
     assert create_mod_spiral(8) == [[5,4,2],[10,1,1],[11,23]]
+
+def test_create_mod_spiral_9():
+    assert create_mod_spiral(9) == [[5,4,2],[10,1,1],[11,23,25]]
+
+def test_create_mod_spiral_10():
+    assert create_mod_spiral(10) == [[5,4,2],[10,1,1],[11,23,25,26]]
+
+def test_create_mod_spiral_11():
+    assert create_mod_spiral(11) == [[5,4,2],[10,1,1,54],[11,23,25,26]]
+
+def test_create_mod_spiral_12():
+    assert create_mod_spiral(12) == [[5,4,2,57],[10,1,1,54],[11,23,25,26]]
+
+def test_create_mod_spiral_23():
+    assert create_mod_spiral(23) == [[147,142,133,122,59],[304,5,4,2,57],[330,10,1,1,54],[351,11,23,25,26],[362,747,806]]
